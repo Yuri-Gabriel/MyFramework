@@ -1,0 +1,53 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "81376ce5b8f570de7889fff46e7d55cf",
+    "packages": [
+        {
+            "name": "yurigabriel/myframeworklibs",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Yuri-Gabriel/MyFrameworkLibs.git",
+                "reference": "eb7513b73ceff5db1750746575770034030aee35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Yuri-Gabriel/MyFrameworkLibs/zipball/eb7513b73ceff5db1750746575770034030aee35",
+                "reference": "eb7513b73ceff5db1750746575770034030aee35",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Framework\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Minhas bibliotecas e classes reutilizáveis.",
+            "support": {
+                "issues": "https://github.com/Yuri-Gabriel/MyFrameworkLibs/issues",
+                "source": "https://github.com/Yuri-Gabriel/MyFrameworkLibs/tree/main"
+            },
+            "time": "2025-08-13T12:29:56+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {},
+    "prefer-stable": true,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=8.0"
+    },
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}

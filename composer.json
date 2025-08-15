@@ -1,0 +1,30 @@
+{
+    "name": "yurigabriel/myframework",
+    "description": "A little project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yuri Gabriel",
+            "email": "yurigabriel.f1012@gmail.com",
+            "homepage": "https://github.com/Yuri-Gabriel/",
+            "role": "Main developer"
+        }
+    ],
+    "keywords": [
+        "framework",
+        "php",
+        "web"
+    ],
+    "require": {
+        "php": ">=8.0",
+        "yurigabriel/myframeworklibs": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyFramework\\": "/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
