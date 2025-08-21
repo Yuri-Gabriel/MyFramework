@@ -4,14 +4,16 @@ namespace App\Controller;
 
 use Framework\Libs\Http\Mapping;
 use Framework\Libs\Engine\Render;
+use Framework\Libs\Http\Request;
 
 class MainController {
-    #[Mapping("/pao")]
-    public function pao() {
-        echo "pao";
+    #[Mapping("/post", "POST")]
+    public function pao(Request $request, int $num): void {
+        print_r($request->getJsonData());
+        print_r($num);
     }
 
-    #[Mapping("/")]
+    #[Mapping("/{teste }/{pao }")]
     public function main(): void {
         Render::render("index_view");
     }
