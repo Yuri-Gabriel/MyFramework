@@ -2,27 +2,33 @@
 
 namespace App\Controller;
 
-use Framework\Libs\Http\Mapping;
+use App\Middleware\Middle;
+use Framework\Libs\Annotations\Controller;
+use Framework\Libs\Annotations\Interceptor;
+use Framework\Libs\Annotations\Mapping;
 use Framework\Libs\Engine\Render;
+use Framework\Libs\Http\HTTP_STATUS;
 use Framework\Libs\Http\Request;
+use Framework\Libs\Http\Response;
 
+#[Controller]
+#[Interceptor(new Middle)] // Passar qual classe será o middleware, Middle::class, não uma instancia da classe Middleware
 class MainController {
-    #[Mapping("/post", "POST")]
-    public function pao(Request $request, int $num): void {
-        print_r($request->getJsonData());
-        print_r($num);
+    #[Mapping("/post", )]
+    public function pao(): void {
+        echo "passou <br>";
     }
 
-    #[Mapping("/{teste }/{pao }")]
+    #[Mapping("/{teste}/{pao}")]
     public function main(): void {
         Render::render("index_view");
     }
 
-    #[Mapping("/teste", "GET")]
+    #[Mapping("/teste", "POST")]
     public function teste(string $txt, string $msg) {
-        var_dump([
+        (new Response(HTTP_STATUS::OK, [
             "txt - inside" => $txt,
             "msg - inside" => $msg
-        ]);
+        ]))->dispatch();
     }
 }

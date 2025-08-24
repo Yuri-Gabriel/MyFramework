@@ -2,23 +2,19 @@
 
 namespace App\Controller;
 
-use Framework\Libs\Http\Mapping;
-use Framework\Libs\Engine\Render;
+use Framework\Libs\Annotations\Controller;
+use Framework\Libs\Annotations\Mapping;
 
+#[Controller]
 class ViewController {
     #[Mapping("/info")]
     public function pao() {
-        Render::render("info_view");
+        echo "alksdjnlas<br>";
     }
 
     #[Mapping('/pindamonhangaba')]
     public function pindamonhangaba(string $cookies) {
         echo "pindamonhangaba - $cookies";
-    }
-
-    #[Mapping('/pindamonhangabaV2')]
-    public function pindamonhangabaV2() {
-        Render::render('adalberto');
     }
     
 }
