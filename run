@@ -1,0 +1,7 @@
+<?php
+$comando = 'php -S localhost:8080';
+exec($comando, $output, $return_var);
+
+foreach ($output as $line) {
+    echo "$line\n";
+}

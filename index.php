@@ -8,5 +8,5 @@ error_reporting(E_ALL);
 
 require_once './vendor/autoload.php';
 
-new RoutesKernel();
+(new RoutesKernel())->listem();
 

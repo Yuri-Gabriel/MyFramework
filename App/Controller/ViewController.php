@@ -2,13 +2,19 @@
 
 namespace App\Controller;
 
-use Framework\Libs\Http\Mapping;
+use App\Middleware\Barragem;
+use Framework\Libs\Annotations\Mapping;
 use Framework\Libs\Engine\Render;
+use Framework\Libs\Annotations\Controller;
+use Framework\Libs\Annotations\Interceptor;
 
+#[Controller]
 class ViewController {
     #[Mapping("/info")]
+    #[Interceptor(Barragem::class)]
     public function pao() {
-        Render::render("info_view");
+        //Render::render("info_view");
+        echo "Passou";
     }
 
     #[Mapping('/pindamonhangaba')]
