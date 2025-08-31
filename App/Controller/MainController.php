@@ -6,13 +6,15 @@ use App\Middleware\B2;
 use App\Middleware\Barragem;
 
 use Framework\Libs\Annotations\Controller;
-use Framework\Libs\Annotations\Interceptor;
+use Framework\Libs\Annotations\Interceptors;
 use Framework\Libs\Annotations\Mapping;
 
 use Framework\Libs\Http\Request;
 
 #[Controller("/teste")]
-#[Interceptor(Barragem::class)]
+#[Interceptors([
+    Barragem::class
+])]
 class MainController {
     #[Mapping("/post", "POST")]
     public function pao(Request $request, int $num): void {
@@ -21,7 +23,10 @@ class MainController {
     }
 
     #[Mapping("/")]
-    #[Interceptor(B2::class)]
+    #[Interceptors([
+        B2::class,
+        Barragem::class
+    ])]
     public function pao2(): void {
         echo "<br>rota /teste";
     }

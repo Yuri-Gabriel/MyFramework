@@ -2,8 +2,8 @@
 
 namespace App\Controller\Relatorio;
 
-use Framework\Libs\Http\Annotations\Mapping;
-use Framework\Libs\Http\Annotations\Controller;
+use Framework\Libs\Annotations\Controller;
+use Framework\Libs\Annotations\Mapping;
 
 #[Controller("/relatorio")]
 class RelatorioController {
@@ -11,6 +11,4 @@ class RelatorioController {
     public function pao(): void {
         echo "Relatorio";
     }
-
-    
 }
