@@ -5,6 +5,7 @@ namespace App\Controller;
 use Framework\Libs\Annotations\Controller;
 use Framework\Libs\Annotations\Mapping;
 use Framework\Libs\Annotations\Instantiate;
+use App\Controller\Teste;
 
 
 #[Controller("/")]
@@ -14,6 +15,6 @@ class Main {
 
     #[Mapping("/")]
     public function main() {
-        //$this->teste->main();
+        $this->teste->run();
     }
 }

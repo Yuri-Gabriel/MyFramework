@@ -3,7 +3,7 @@
 namespace App\Controller;
 
 class Teste {
-    public function main() {
-        echo "foi";
+    public function run() {
+        echo "oi";
     }
 }
