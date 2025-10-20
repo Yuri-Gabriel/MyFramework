@@ -2,21 +2,22 @@
 
 namespace App\Model;
 
-use Framework\Libs\Annotations\DataBase\Column;
+use Framework\Libs\Annotations\DataBase\Collumn;
 use Framework\Libs\Annotations\DataBase\ForeignKey;
 use Framework\Libs\Annotations\DataBase\Model;
 use Framework\Libs\Annotations\DataBase\PrimaryKey;
 
-#[Model]
+#[Model("pessoa")]
 class Pessoa {
 
     #[PrimaryKey]
-    #[Column("id_pessoa")]
+    #[Collumn("id")]
     public int $id;
 
-    #[Column("nome")]
+    #[Collumn("nome")]
     public string $nome;
 
-    #[ForeignKey("id_endereço", Endereco::class)]
-    public int $id_endereço;
+    #[ForeignKey("id", Endereco::class)]
+    #[Collumn("id_endereco")]
+    public int $id_endereco;
 }

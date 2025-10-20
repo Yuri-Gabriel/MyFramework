@@ -7,6 +7,6 @@ use Framework\Libs\Annotations\DataBase\ForeignKey;
 use Framework\Libs\Annotations\DataBase\Model;
 use Framework\Libs\Annotations\DataBase\PrimaryKey;
 
-#[Model]
+#[Model("endereco")]
 class Endereco {
 }

@@ -1,6 +1,6 @@
 <?php
 
-use Framework\Kernel\RoutesKernel;
+use Framework\Kernel\Kernel;
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -8,5 +8,5 @@ error_reporting(E_ALL);
 
 require_once './vendor/autoload.php';
 
-(new RoutesKernel())->listem();
+(new Kernel())->start();
 
