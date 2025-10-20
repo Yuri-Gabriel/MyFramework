@@ -17,7 +17,7 @@ class Pessoa {
     #[Collumn("nome")]
     public string $nome;
 
-    #[ForeignKey("id", Endereco::class)]
+    #[ForeignKey("id", Endereco::class, true)]
     #[Collumn("id_endereco")]
     public int $id_endereco;
 }
