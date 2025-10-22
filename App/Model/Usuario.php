@@ -6,25 +6,21 @@ use Framework\Libs\Annotations\DataBase\Collumn;
 use Framework\Libs\Annotations\DataBase\ForeignKey;
 use Framework\Libs\Annotations\DataBase\Model;
 use Framework\Libs\Annotations\DataBase\PrimaryKey;
-use Framework\Libs\DataBase\Repository;
 
-#[Model("pessoa")]
-class Pessoa {
-
+#[Model("usuario")]
+class Usuario {
     #[PrimaryKey]
     #[Collumn("id")]
     public int $id;
 
-    #[Collumn("nome")]
-    public string $nome;
+    #[Collumn("username")]
+    public string $username;
 
+    #[Collumn("email")]
+    public string $email;
+
+    // Um usuário pode ou não ter um endereço cadastrado inicialmente (nullable = true)
     #[ForeignKey("id", Endereco::class, true)]
     #[Collumn("id_endereco")]
-    public int $id_endereco;
-
-    public Repository $repository;
-
-    public function __construct() {
-        $this->repository = new Repository(self::class);
-    }
+    public ?int $id_endereco = null; // A propriedade deve ser nullable em PHP
 }

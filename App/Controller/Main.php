@@ -5,16 +5,16 @@ namespace App\Controller;
 use Framework\Libs\Annotations\Controller;
 use Framework\Libs\Annotations\Mapping;
 use Framework\Libs\Annotations\Instantiate;
-use App\Controller\Teste;
-
+use App\Model\Pessoa;
 
 #[Controller("/")]
 class Main {
     #[Instantiate]
-    private Teste $teste;
+    private Pessoa $pessoa;
 
     #[Mapping("/")]
     public function main() {
-        $this->teste->run();
+
+        $this->pessoa->repository->delete();
     }
 }

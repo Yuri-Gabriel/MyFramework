@@ -6,11 +6,9 @@ use Framework\Libs\Annotations\DataBase\Collumn;
 use Framework\Libs\Annotations\DataBase\ForeignKey;
 use Framework\Libs\Annotations\DataBase\Model;
 use Framework\Libs\Annotations\DataBase\PrimaryKey;
-use Framework\Libs\DataBase\Repository;
 
-#[Model("pessoa")]
-class Pessoa {
-
+#[Model("departamento")]
+class Departamento {
     #[PrimaryKey]
     #[Collumn("id")]
     public int $id;
@@ -18,13 +16,6 @@ class Pessoa {
     #[Collumn("nome")]
     public string $nome;
 
-    #[ForeignKey("id", Endereco::class, true)]
-    #[Collumn("id_endereco")]
-    public int $id_endereco;
-
-    public Repository $repository;
-
-    public function __construct() {
-        $this->repository = new Repository(self::class);
-    }
+    #[Collumn("sigla")]
+    public string $sigla;
 }
