@@ -21,10 +21,4 @@ class Pessoa {
     #[ForeignKey("id", Endereco::class, true)]
     #[Collumn("id_endereco")]
     public int $id_endereco;
-
-    public Repository $repository;
-
-    public function __construct() {
-        $this->repository = new Repository(self::class);
-    }
 }
