@@ -9,7 +9,7 @@ use App\Model\Pessoa;
 use App\Repository\PessoaRepository;
 use Framework\Libs\DataBase\WhereQueryBuilder;
 
-#[Controller("/")]
+#[Controller("/main")]
 class Main {
     #[Instantiate]
     private PessoaRepository $pessoaRepository;
