@@ -5,11 +5,10 @@ namespace App\Controller;
 use Framework\Libs\Annotations\Controller;
 use Framework\Libs\Annotations\Mapping;
 use Framework\Libs\Annotations\Instantiate;
-use App\Model\Pessoa;
 use App\Repository\PessoaRepository;
 use Framework\Libs\DataBase\WhereQueryBuilder;
 
-#[Controller("/main")]
+#[Controller]
 class Main {
     #[Instantiate]
     private PessoaRepository $pessoaRepository;
@@ -32,9 +31,9 @@ class Main {
         ->leftJoin('pedido', 'pedido.id', '=', 'pessoa.id_pedido')
         ->orderByDESC('nome')
         ->orderByASC('idade')
-        ->get();
+        ->limit(100)
+        ->getQuery();
 
-        echo "<pre>";
-        echo $query;
+        
     }
 }

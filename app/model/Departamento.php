@@ -3,7 +3,6 @@
 namespace App\Model;
 
 use Framework\Libs\Annotations\DataBase\Collumn;
-use Framework\Libs\Annotations\DataBase\ForeignKey;
 use Framework\Libs\Annotations\DataBase\Model;
 use Framework\Libs\Annotations\DataBase\Nullable;
 use Framework\Libs\Annotations\DataBase\PrimaryKey;
