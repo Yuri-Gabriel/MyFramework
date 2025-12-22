@@ -32,7 +32,7 @@ class Main {
         ->orderByDESC('nome')
         ->orderByASC('idade')
         ->limit(100)
-        ->getQuery();
+        ->run();
 
         
     }
