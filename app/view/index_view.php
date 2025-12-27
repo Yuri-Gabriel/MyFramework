@@ -6,9 +6,8 @@
     <title>View</title>
 </head>
 <body>
-    <a href="/info">outra pagina</a>
-    <?php
-        include "info_view.php";
-    ?>
+    <h1>
+        Wellcome
+    </h1>
 </body>
 </html>
