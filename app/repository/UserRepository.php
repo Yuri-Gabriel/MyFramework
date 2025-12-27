@@ -2,11 +2,11 @@
 
 namespace App\Repository;
 
-use App\Model\Pessoa;
+use App\Model\User;
 use Framework\Libs\DataBase\Repository;
 
-class PessoaRepository extends Repository {
+class UserRepository extends Repository {
     public function __construct() {
-        parent::__construct(Pessoa::class);
+        parent::__construct(User::class);
     }
 }

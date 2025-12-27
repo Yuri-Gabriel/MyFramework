@@ -3,29 +3,36 @@
 namespace App\Controller;
 
 use Framework\Libs\Annotations\Controller;
-use Framework\Libs\Annotations\Mapping;
 use Framework\Libs\Annotations\Instantiate;
-use App\Repository\PessoaRepository;
+use Framework\Libs\Annotations\Mapping;
+use Framework\Libs\Engine\Render;
+use Framework\Libs\Http\Request;
 
 #[Controller]
 class Main {
-    #[Instantiate]
-    private PessoaRepository $pessoaRepository;
+
+    #[Instantiate()]
+    public Request $request;
+
     #[Mapping("/")]
     public function main() {
+        Render::render("index_view");
+    }
 
-        // $this->pessoaRepository->insert([
-        //     "nome" => "yuri"
-        // ])->run();
+    #[Mapping('/{name}')]
+    public function getParams($name) {
+        echo "name = $name";
+    }
 
-        $query = $this->pessoaRepository->select([
-            '*', 
-        ])
-        ->run();
+    #[Mapping('/param/get')]
+    public function getParamsURI($name, $age) {
+        echo "name = $name; age = $age";
+    }
 
-        echo "<pre>";
-        var_dump($query);
-
-        
+    #[Mapping('/sendJson', "POST")]
+    public function send() {
+        var_dump(
+            $this->request->body
+        );
     }
 }
