@@ -18,13 +18,13 @@
     ],
     "require": {
         "php": ">=8.0",
-        "yurigabriel/myframeworklibs": "*"
+        "yurigabriel/myframeworklibs": "^1.0"
     },
     "autoload": {
         "psr-4": {
             "MyFramework\\": "/"
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }

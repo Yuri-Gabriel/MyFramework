@@ -4,26 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "81376ce5b8f570de7889fff46e7d55cf",
+    "content-hash": "d6b1356e94338086777291be7a0501cd",
     "packages": [
         {
             "name": "yurigabriel/myframeworklibs",
-            "version": "dev-main",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yuri-Gabriel/MyFrameworkLibs.git",
-                "reference": "eb7513b73ceff5db1750746575770034030aee35"
+                "reference": "85ed6dca310fa8241ecf8a72026027c141fc460c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yuri-Gabriel/MyFrameworkLibs/zipball/eb7513b73ceff5db1750746575770034030aee35",
-                "reference": "eb7513b73ceff5db1750746575770034030aee35",
+                "url": "https://api.github.com/repos/Yuri-Gabriel/MyFrameworkLibs/zipball/85ed6dca310fa8241ecf8a72026027c141fc460c",
+                "reference": "85ed6dca310fa8241ecf8a72026027c141fc460c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=8.0"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -34,14 +33,14 @@
             "description": "Minhas bibliotecas e classes reutilizáveis.",
             "support": {
                 "issues": "https://github.com/Yuri-Gabriel/MyFrameworkLibs/issues",
-                "source": "https://github.com/Yuri-Gabriel/MyFrameworkLibs/tree/main"
+                "source": "https://github.com/Yuri-Gabriel/MyFrameworkLibs/tree/v1.0.0"
             },
-            "time": "2025-08-13T12:29:56+00:00"
+            "time": "2025-12-27T21:53:58+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -49,5 +48,5 @@
         "php": ">=8.0"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
